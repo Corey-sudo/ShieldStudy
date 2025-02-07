@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield Study - Ace Your Police Promotional Exam</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #002147; /* Navy Blue */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        h1, h2 {
+            color: #002147; /* Navy Blue */
+        }
+
+        section {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+        .feature:last-child {
+            border-bottom: none;
+        }
+
+        .feature img {
+            width: 150px; /* Adjust as needed */
+            margin-right: 2rem;
+            border-radius: 8px; /* Optional: Rounded corners */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Subtle shadow */
+        }
+		.feature-reverse img {
+			margin-left: 2rem;
+            margin-right: 0;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+		.feature-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FFD700; /* Gold */
+            color: #002147; /* Navy Blue */
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #DAA520; /* Darker Gold */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .feature{
+                flex-direction: column;
+            }
+             .feature img, .feature-reverse img {
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 1rem;
+                width: 100%; /* Full width on small screens */
+                max-width: 300px;
+            }
+            .feature-reverse{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Shield Study</h1>
+            <p>Your Ultimate Police Promotional Exam Prep App</p>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>Ace Your Exam with Shield Study</h2>
+        <p>Prepare for your police promotional exam with confidence using Shield Study. Our comprehensive app provides everything you need to succeed, including hundreds of practice questions, custom quizzes, and detailed progress tracking.</p>
+        <a href="#" class="cta-button">Download Now</a>  </section>
+
+    <section id="features" class="container">
+        <h2>Key Features</h2>
+        <div class="feature">
+            <img src="images/question_bank.png" alt="Question Bank Icon">
+            <div class="feature-text">
+                <h3>Extensive Question Bank</h3>
+                <p>Access over 500 practice questions covering all key areas of your police promotional exam, including policy, law, and procedure.</p>
+            </div>
+        </div>
+
+        <div class="feature feature-reverse">
+            <img src="images/custom_quiz.png" alt="Custom Quiz Icon">
+            <div class="feature-text">
+                <h3>Customizable Quizzes</h3>
+                <p>Create personalized quizzes tailored to your specific study needs. Focus on your weak areas and build confidence.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="images/progress_tracking.png" alt="Progress Tracking Icon">
+            <div class="feature-text">
+                <h3>Detailed Progress Tracking</h3>
+                <p>Monitor your performance with detailed statistics and visualizations. Identify areas for improvement and track your progress over time.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="pricing" class="container">
+        <h2>Simple Pricing</h2>
+        <p>Choose the plan that's right for you and unlock full access to all of Shield Study's features.</p>
+        <ul>
+            <li><strong>Monthly:</strong> $9.99/month (3-day free trial)</li>
+            <li><strong>Yearly:</strong> $59.99/year (3-day free trial, save 50%!)</li>
+        </ul>
+         <a href="#" class="cta-button">Get Started Today</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>Shield Study was created by current and former law enforcement officers to provide an effective and affordable way for aspiring officers to prepare for their promotional exams. We are dedicated to helping you achieve your career goals.</p>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>If you have any comments or questions, please reach out to us at
+      <a href="mailto:support@yourapp.com">support@yourapp.com</a></p>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Shield Study. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
