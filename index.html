@@ -4,121 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shield Study - Ace Your Police Promotional Exam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #002147; /* Navy Blue */
+            --secondary-color: #FFD700; /* Gold */
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --background-light: #f8f9fa;
+            --background-card: #ffffff;
+            --border-light: #dee2e6;
+            --hover-gold: #e6c300; /* Darker Gold */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
         body {
-            font-family: sans-serif;
+            font-family: 'Poppins', sans-serif; /* Modern font */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--background-light);
+            color: var(--dark-text);
+            line-height: 1.7; /* Improved readability */
+            font-weight: 300; /* Lighter default weight */
         }
 
         header {
-            background-color: #002147; /* Navy Blue */
-            color: #fff;
-            padding: 1rem 0;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.5rem 0; /* Increased padding */
             text-align: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            position: sticky; /* Optional: Keep header visible */
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            max-width: 1100px; /* Max width for larger screens */
+            margin: 0 auto;
+            padding: 0 1rem; /* Padding for smaller screens */
+        }
+
+        header h1 {
+            margin-bottom: 0.25rem;
+            font-weight: 700; /* Bolder title */
+            font-size: 2.5rem;
+            color: var(--light-text); /* Explicitly set color */
+        }
+
+        header p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
         }
 
         nav ul {
             padding: 0;
             list-style: none;
+            margin: 0;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 1rem;
+            display: inline-block; /* Use inline-block for padding */
+            margin: 0 0.5rem;
         }
+
         nav ul li a {
-          color: #fff;
-          text-decoration: none;
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 400;
+            padding: 0.5rem 1rem; /* Add padding for larger clickable area */
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: rgba(255, 255, 255, 0.1); /* Subtle hover */
+            outline: none; /* Remove default focus outline if providing custom */
         }
 
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
+            width: 90%; /* Use percentage for flexibility */
+            max-width: 1000px; /* Max width for content */
+            margin: 0 auto; /* Center container */
+            padding: 3rem 1rem; /* Generous vertical padding, horizontal for small screens */
         }
 
-        h1, h2 {
-            color: #002147; /* Navy Blue */
-        }
-
+        /* Consistent section styling */
         section {
-            padding: 1rem 0;
-            margin-bottom: 1rem;
+             padding-top: 2rem; /* Adjust based on header height if sticky */
+             padding-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        h3 {
+             color: var(--primary-color);
+             font-weight: 600;
+             font-size: 1.4rem;
+             margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section Specifics */
+        .hero-section {
+            text-align: center;
+            background-color: var(--background-card); /* White background */
+            padding: 3rem 1rem; /* Extra padding */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            margin-top: 3rem; /* Space below header */
+            margin-bottom: 3rem;
+        }
+        .hero-section h2{
+            margin-top: 0;
+        }
+
+        /* Feature Section - Card Style */
+        #features .container {
+            padding-top: 1rem; /* Less padding if h2 is outside */
         }
 
         .feature {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 1rem;
-        }
-        .feature:last-child {
-            border-bottom: none;
+            gap: 2rem; /* Spacing between items */
+            margin-bottom: 2rem;
+            background-color: var(--background-card);
+            padding: 2rem; /* Padding inside the card */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            overflow: hidden; /* Ensure contents stay within rounded corners */
         }
 
-        .feature img {
-            width: 150px; /* Adjust as needed */
-            margin-right: 2rem;
-            border-radius: 8px; /* Optional: Rounded corners */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Subtle shadow */
-        }
-		.feature-reverse img {
-			margin-left: 2rem;
-            margin-right: 0;
-        }
+        /* No specific image styling needed unless you add images back */
+        /* .feature img { ... } */
 
         .feature-text {
             flex: 1;
         }
-		.feature-reverse {
+        .feature-reverse {
             flex-direction: row-reverse;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: #FFD700; /* Gold */
-            color: #002147; /* Navy Blue */
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+        /* Pricing Section */
+         #pricing ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center list items */
+            margin-bottom: 1.5rem;
         }
 
-        .cta-button:hover {
-            background-color: #DAA520; /* Darker Gold */
+        #pricing li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+         #pricing li strong {
+            font-weight: 600;
+            color: var(--primary-color);
+         }
+         #pricing .container {
+             text-align: center; /* Center button too */
+         }
+
+
+        /* About Section */
+        #about .container, #privacy .container {
+             background-color: var(--background-card);
+             padding: 2rem;
+             border-radius: 8px;
+             box-shadow: 0 4px 15px var(--shadow-color);
+             margin-bottom: 3rem;
+        }
+         #about h2, #privacy h2 {
+            margin-top: 0; /* Remove top margin if inside container */
+         }
+
+        /* Privacy Policy Section */
+        #privacy h3 {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+        }
+        #privacy ul {
+            list-style: disc; /* Use standard bullets */
+            padding-left: 25px; /* Indent list */
+            margin-top: 0.5rem;
+        }
+        #privacy li {
+             margin-bottom: 0.5rem;
+        }
+        #privacy p:last-of-type { /* Remove extra margin below last paragraph */
+             margin-bottom: 0;
+        }
+        #privacy a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #privacy a:hover, #privacy a:focus {
+            color: var(--hover-gold);
+            text-decoration: underline;
+        }
+
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.8rem 2rem; /* Larger padding */
+            text-decoration: none;
+            border-radius: 25px; /* Pill shape */
+            font-weight: 600; /* Bolder text */
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: var(--hover-gold);
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            outline: none; /* Remove default focus outline */
         }
 
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
+            padding: 1.5rem 0;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            margin-top: 3rem; /* Space above footer */
         }
+         footer .container {
+             padding: 0 1rem; /* Reset padding */
+             margin: 0 auto;
+             max-width: 1100px;
+         }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav ul li {
+                margin: 0 0.2rem; /* Reduce nav spacing */
+            }
+            nav ul li a {
+                padding: 0.4rem 0.6rem; /* Reduce nav padding */
+            }
+
             .container {
-                width: 90%;
+                width: 95%; /* Slightly wider on mobile */
+                padding: 2rem 1rem; /* Adjust vertical padding */
             }
-            .feature{
-                flex-direction: column;
+
+            h2 {
+                font-size: 1.8rem;
             }
-             .feature img, .feature-reverse img {
+             h3 {
+                 font-size: 1.3rem;
+             }
+
+             .hero-section {
+                 padding: 2rem 1rem;
+                 margin-top: 1.5rem;
+                 margin-bottom: 1.5rem;
+             }
+
+            .feature,
+            .feature-reverse {
+                flex-direction: column; /* Stack features vertically */
+                text-align: center; /* Center text when stacked */
+                padding: 1.5rem; /* Adjust padding */
+                 gap: 1rem; /* Reduce gap */
+            }
+
+            /* If you add images back, adjust their margins: */
+            /* .feature img, .feature-reverse img {
                 margin-right: 0;
                 margin-left: 0;
                 margin-bottom: 1rem;
-                width: 100%; /* Full width on small screens */
-                max-width: 300px;
-            }
-            .feature-reverse{
-                flex-direction: column;
-            }
+                width: 100%;
+                max-width: 250px;
+            } */
         }
     </style>
 </head>
@@ -132,99 +330,103 @@
                     <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                    <li><a href="#privacy">Privacy</a></li> </ul>
             </nav>
         </div>
     </header>
 
-    <section class="container">
+    <section class="container hero-section">
         <h2>Ace Your Exam with Shield Study</h2>
         <p>Prepare for your police promotional exam with confidence using Shield Study. Our comprehensive app provides everything you need to succeed, including hundreds of practice questions, custom quizzes, and detailed progress tracking.</p>
-        <a href="#" class="cta-button">Download Now</a>  </section>
+        <a href="#" class="cta-button">Download Now</a> </section>
 
-    <section id="features" class="container">
-        <h2>Key Features</h2>
-        <div class="feature">
-            <div class="feature-text">
-                <h3>Extensive Question Bank</h3>
-                <p>Access over 455 practice questions covering key areas of your police promotional exam, including policy, law, and procedure.</p>
+    <section id="features" >
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <div class="feature-text">
+                    <h3>Extensive Question Bank</h3>
+                    <p>Access over 455 practice questions covering key areas of your police promotional exam, including policy, law, and procedure.</p>
+                </div>
+            </div>
+
+            <div class="feature feature-reverse">
+                 <div class="feature-text">
+                    <h3>Customizable Quizzes</h3>
+                    <p>Create personalized quizzes tailored to your specific study needs. Focus on your weak areas and build confidence.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                 <div class="feature-text">
+                    <h3>Detailed Progress Tracking</h3>
+                    <p>Monitor your performance with detailed statistics. Identify areas for improvement and track your progress over time.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="feature feature-reverse">
-            <div class="feature-text">
-                <h3>Customizable Quizzes</h3>
-                <p>Create personalized quizzes tailored to your specific study needs. Focus on your weak areas and build confidence.</p>
-            </div>
+    <section id="pricing">
+        <div class="container">
+             <h2>Simple Pricing</h2>
+             <p>Choose the plan that's right for you and unlock full access to all of Shield Study's features.</p>
+             <ul>
+                 <li><strong>Monthly:</strong> $8/month (3-day free trial)</li>
+                 <li><strong>Yearly:</strong> $40/year (3-day free trial, save 50%!)</li>
+             </ul>
+             <a href="#" class="cta-button">Get Started Today</a> </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Shield Study was created by a former Baltimore Police Sergeant. We strive to provide an effective and affordable way for aspiring officers to prepare for their promotional exams and are dedicated to helping you achieve your career goals.</p>
         </div>
-
-        <div class="feature">
-            <div class="feature-text">
-                <h3>Detailed Progress Tracking</h3>
-                <p>Monitor your performance with detailed statistics. Identify areas for improvement and track your progress over time.</p>
-            </div>
-        </div>
-
     </section>
 
-    <section id="pricing" class="container">
-        <h2>Simple Pricing</h2>
-        <p>Choose the plan that's right for you and unlock full access to all of Shield Study's features.</p>
-        <ul>
-            <li><strong>Monthly:</strong> $8/month (3-day free trial)</li>
-            <li><strong>Yearly:</strong> $40/year (3-day free trial, save 50%!)</li>
-        </ul>
-         <a href="#" class="cta-button">Get Started Today</a>
-    </section>
+    <section id="privacy">
+        <div class="container">
+             <h2>Privacy Policy</h2>
+             <p>Last updated: February 7, 2025</p>
 
-    <section id="about" class="container">
-        <h2>About Us</h2>
-        <p>Shield Study was created by a former Baltimore Police Sergeant. We strive to provide an effective and affordable way for aspiring officers to prepare for their promotional exams and are dedicated to helping you achieve your career goals.</p>
-    </section>
+             <h3>Information We Collect</h3>
+             <p>Shield Study collects only the email address you provide during account creation. This information is necessary for account authentication and communication regarding your subscription.</p>
 
-    <section id="privacy" class="container">
-        <h2>Privacy Policy</h2>
-        <p>Last updated: February 7, 2025</p>
-        
-        <h3>Information We Collect</h3>
-        <p>Shield Study collects only the email address you provide during account creation. This information is necessary for account authentication and communication regarding your subscription.</p>
-        
-        <h3>How We Use Your Information</h3>
-        <p>Your email address is used for:</p>
-        <ul>
-            <li>Account authentication through Firebase</li>
-            <li>Essential service communications</li>
-            <li>Subscription management</li>
-        </ul>
-        
-        <h3>Data Security</h3>
-        <p>We use Firebase Authentication to securely manage user accounts. Your email address is protected according to Firebase's security standards and best practices.</p>
-        
-        <h3>Payment Processing</h3>
-        <p>All payments are processed through Google or Apple Payment systems. We do not store or have access to your payment information.</p>
-        
-        <h3>Data Sharing</h3>
-        <p>We do not sell, trade, or otherwise transfer your personal information to third parties. Your data is only used for the purposes stated in this policy.</p>
-        
-        <h3>Your Rights</h3>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access your personal information</li>
-            <li>Request deletion of your account and associated data</li>
-        </ul>
-        
-        <h3>Changes to This Policy</h3>
-        <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last updated" date.</p>
-        
-        <h3>Contact Us</h3>
-        <p>If you have any questions about this privacy policy or would like to request to delete your account and information, please contact us at <a href="mailto:Mclauferty@gmail.com">Mclauferty@Gmail.com</a>.</p>
+             <h3>How We Use Your Information</h3>
+             <p>Your email address is used for:</p>
+             <ul>
+                 <li>Account authentication through Firebase</li>
+                 <li>Essential service communications</li>
+                 <li>Subscription management</li>
+             </ul>
+
+             <h3>Data Security</h3>
+             <p>We use Firebase Authentication to securely manage user accounts. Your email address is protected according to Firebase's security standards and best practices.</p>
+
+             <h3>Payment Processing</h3>
+             <p>All payments are processed through Google or Apple Payment systems. We do not store or have access to your payment information.</p>
+
+             <h3>Data Sharing</h3>
+             <p>We do not sell, trade, or otherwise transfer your personal information to third parties. Your data is only used for the purposes stated in this policy.</p>
+
+             <h3>Your Rights</h3>
+             <p>You have the right to:</p>
+             <ul>
+                 <li>Access your personal information</li>
+                 <li>Request deletion of your account and associated data</li>
+             </ul>
+
+             <h3>Changes to This Policy</h3>
+             <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last updated" date.</p>
+
+             <h3>Contact Us</h3>
+             <p>If you have any questions about this privacy policy or would like to request to delete your account and information, please contact us at <a href="mailto:Mclauferty@gmail.com">Mclauferty@Gmail.com</a>.</p>
+         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Shield Study. All rights reserved.</p>
-        </div>
+            <p>&copy; 2025 Shield Study. All rights reserved.</p> </div>
     </footer>
 
 </body>
